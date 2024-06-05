@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="./assets/styles/style.css">
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div id="container">
+    <h1>punya huda sederhana aja</h1>
+    <div id="login-container">
+      <h2>Login</h2>
+      <input type="text" id="login-email" placeholder="Email">
+      <input type="password" id="login-password" placeholder="Password">
+      <div class="row">
+        <button onclick="login()">Login</button>
+        <button onclick="goToRegister()">Register</button>
+      </div>
+    </div>
+    <div id="user-list">
+      <h2>Registered Users realtime</h2>
+      <p> hayo ketauan kan lagi stalking web akuh ini dia akun akun nya:</p>
+      <ul id="users"></ul>
+    </div>
+  </div>
+  <script src="./assets/scripts/script.js"></script>
+</body>
+</html>

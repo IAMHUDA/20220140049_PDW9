@@ -1,0 +1,230 @@
+
+* {
+    font-family: sans-serif;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  #Home {
+    background-image: url(../images/background.png);
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #Home h1 {
+    color: white;
+    position: absolute;
+    font-size: 50px;
+    z-index: 2;
+    margin-top: 10px;
+  }
+  #Home img {
+    position: absolute;
+    bottom: 0px;
+  }
+  #Mountain1 {
+    position: absolute;
+    margin-bottom: 106px;
+    margin-left: 60px;
+    width: 100%;
+    pointer-events: none;
+  }
+  #Mountain2 {
+    width: 100%;
+    z-index: 3;
+    pointer-events: none;
+  }
+  #leftCloud,
+  #mainCloud,
+  #rightCloud {
+    top: 120px;
+    width: 200px;
+  }
+  #leftCloud {
+    left: 20px;
+  }
+  #rightCloud {
+    right: 20px;
+  }
+  @keyframes loadAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  header nav {
+    position: absolute;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    z-index: 4;
+    padding: 30px 140px;
+    font-size: 22px;
+    animation: loadAnimation 2s;
+  }
+  header nav span {
+    width: 50%;
+    padding-right: 60px;
+    display: flex;
+    justify-content: space-around;
+  }
+  header nav span a {
+    text-decoration: none;
+    position: relative;
+  }
+  header nav span a::before {
+    content: "";
+    background-color: white;
+    width: 0%;
+    height: 2.5px;
+    display: unset;
+    position: absolute;
+    border-radius: 20px;
+    bottom: -5px;
+    transition: 0.3s;
+  }
+  header nav span a:hover::before {
+    width: 100%;
+  }
+  #About {
+    background-color: #c20772;
+    padding: 0px 100px;
+    min-height: 100vh;
+    font-size: 20px;
+  }
+  #About h1 {
+    padding-top: 50px;
+    font-size: 40px;
+  }
+  #About p{
+      padding: 30px 0px;
+  }
+  .active{
+      color: black;
+  }
+  .active::before{
+      background-color: black;
+      width: 100%;
+  }
+
+/* ========================================== */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 33.33%; /* To show 3 items at a time */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.carousel .prev, .carousel .next {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.carousel .prev {
+  left: 10px;
+}
+
+.carousel .next {
+  right: 10px;
+}
+
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ddd;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+  background: #333;
+}
+
+.testimonials-item {
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+  margin-top: 15px;
+}
+
+.text-content h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.footer-logos i {
+  font-size: 2em;
+}
+.footer-logos a {
+  color: white;
+  text-decoration: none;
+}
+.footer-logos a:hover {
+  color: #ddd;
+}
